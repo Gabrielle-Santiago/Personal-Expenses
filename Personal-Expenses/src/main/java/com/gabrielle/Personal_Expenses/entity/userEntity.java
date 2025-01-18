@@ -37,7 +37,7 @@ public class userEntity {
     private String login;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column()
     private situacionUser situacion;
     
     public userEntity(userDTO user) {

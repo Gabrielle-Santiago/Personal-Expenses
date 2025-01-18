@@ -38,4 +38,10 @@ public class userService {
     public userDTO searchUserID(Long id) {
         return new userDTO((userEntity) userRepository.findById(id).get());
     }
+
+    public List<userDTO> searchUser() {
+        return userRepository.findAll().stream()
+                .map(userDTO::new)
+                .toList();
+    }
 }
