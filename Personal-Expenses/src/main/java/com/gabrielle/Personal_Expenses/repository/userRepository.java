@@ -1,9 +1,10 @@
 package com.gabrielle.Personal_Expenses.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.security.core.userdetails.UserDetails;
 
-import com.gabrielle.Personal_Expenses.entity.userEntity;
+import com.gabrielle.Personal_Expenses.authentication.user.User;
 
-public interface userRepository extends JpaRepository<userEntity, Long> {
-    
+public interface UserRepository extends JpaRepository<User, String>{
+    UserDetails findByLogin(String login);
 }
