@@ -23,7 +23,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
+
 public class User implements UserDetails {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
